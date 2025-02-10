@@ -4,9 +4,9 @@ import Para from "./Para";
 export default function Stopwatch(){
     const [stopwatch, setStopwatch] = useState({time : 0, pause : false});
     useEffect(()=>{
-        setter();
+        stopwatch.time < 61 ? setter() : setStopwatch({...stopwatch, time : 0});
         return () => clearInterval(timeRef.current);
-    })
+    },[stopwatch.time])
 
     let timeRef = useRef();
     function setter(){
@@ -16,11 +16,12 @@ export default function Stopwatch(){
     }
     function handlePause(val){
         if(val){
-            clearInterval(timeRef.current)
             setStopwatch({...stopwatch, pause : true});
+            clearInterval(timeRef.current)
         }
         else{
             setStopwatch({...stopwatch, pause : false})
+            setter();
         }
     }
     return <>
