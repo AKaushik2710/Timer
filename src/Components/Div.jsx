@@ -1,4 +1,4 @@
 export default function Div(props){
-    const {id, clickHandler, children} = props;
-    return <div id={id} onClick={clickHandler}>{children}</div>
+    const {id, cn, clickHandler, children} = props;
+    return <div id={id} className={cn} onClick={clickHandler}>{children}</div>
 }

@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button{
+    color: red;
+    background-color: rgb(0, 238, 255);
+}
+button:hover{
+    border: 2px solid rgb(255, 0, 140);
+    box-shadow: 0px 35px 12px inset rgb(154, 243, 255);
+}
+#stopwatch{
+    display: flex;
+    width: 80dvw;
+    height: 60.5dvh;
+}
+#display{
+    display: flex;
+    width: 50dvw;
+    height: 50dvh;
+    justify-content: space-between;
+}
+.time{
+    display: flex;
+    font-size: 3rem;
+    height: 90%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.time_holder{
+    flex: 33%;
+    height: inherit;
+    display : flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sep{
+    font-size: 4rem;
+}
+
+.txt{
+    margin-top: 85px;
+}
+
+#functionality{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+div{
+    border: 1px solid black;
+}
+
+#catcher{
+    width: 30dvw;
+    display: flex;
+    flex-direction: column;
+    gap: 2dvh;
+    height : 50dvh;
+    padding-top: 2dvh;
+    overflow-y: auto;
+}
+
+.catches{
+    font-size: 1.5rem;
+    border: 1px solid red;
+}
