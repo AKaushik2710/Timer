@@ -2,25 +2,30 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    background-color: black;
 }
 button{
-    color: red;
-    background-color: rgb(0, 238, 255);
+    box-shadow: 0px 0px 70px inset rgb(154, 61, 216);
+    /* background-color: rgb(154, 61, 216); */
 }
 button:hover{
-    border: 2px solid rgb(255, 0, 140);
-    box-shadow: 0px 35px 12px inset rgb(154, 243, 255);
+    /* box-shadow: 0px 35px 12px inset rgb(154, 243, 255); */
+    /* background-color: rgb(0, 238, 255); */
+    box-shadow: 0 0 70px rgb(154, 61, 216);
+    color: rgb(255, 0, 140);
 }
 #stopwatch{
     display: flex;
-    width: 80dvw;
+    width: 75dvw;
     height: 60.5dvh;
+    justify-content: space-between;
 }
 #display{
     display: flex;
     width: 50dvw;
     height: 50dvh;
     justify-content: space-between;
+    color: rgb(255, 0, 140);
 }
 .time{
     display: flex;
@@ -52,21 +57,50 @@ button:hover{
     font-size: 1.4rem;
 }
 
-div{
-    border: 1px solid black;
-}
-
 #catcher{
-    width: 30dvw;
+    width: 20dvw;
     display: flex;
     flex-direction: column;
     gap: 2dvh;
     height : 50dvh;
-    padding-top: 2dvh;
+    background-color: rgb(154, 61, 216);
+    color : black;
+    font-weight: 700;
     overflow-y: auto;
+}
+
+#catcher::-webkit-scrollbar{
+    width: 2px;
+}
+#catcher::-webkit-scrollbar-thumb{
+    background-color: red;
+}
+#catcher::-webkit-scrollbar-track{
+    background-color: green;
 }
 
 .catches{
     font-size: 1.5rem;
-    border: 1px solid red;
+    margin-top: 2dvh;
+    position: relative;
+    background-color: inherit;
+}
+
+#catcher:hover{
+    background-color: black;
+    color: rgb(154, 61, 216);
+}
+.catches:hover{
+    border: 2px solid rgb(154, 61, 216);
+    border-radius: 10px;
+    background-color: black;
+    color: rgb(154, 61, 216);
+}
+
+.indexing{
+    position: absolute;
+    left: 0.5dvw;
+    bottom: 0.3dvh;
+    font-size: 1rem;
+    background-color: inherit;
 }
