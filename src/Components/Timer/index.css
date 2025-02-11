@@ -1,0 +1,8 @@
+#timer{
+    font-size: 2rem;
+}
+
+.up_arr,.down_arr{
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}

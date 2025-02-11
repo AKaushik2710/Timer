@@ -68,7 +68,7 @@ export default function Stopwatch(){
     </Div>
     <Div id="catcher">
                 {flags.map((flag, index)=>{
-                    return <Para key={index} cn="catches">{flag}</Para>
+                    return <Para key={index} cn="catches"><span className="indexing">{index+1+"."}</span>{flag}</Para>
                 })}
     </Div>
     </Div>
