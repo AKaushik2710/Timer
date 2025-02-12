@@ -40,3 +40,42 @@
 .read-the-docs {
   color: #888;
 }
+
+#hamburger{
+  position: absolute;
+  left : 1dvw;
+  font-size: 3rem;
+  top: 1dvh;
+  color: rgb(255, 1, 179);
+  cursor: pointer;
+}
+
+
+/* Swap Between Files & Folders */
+#chooser{
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top : 0;
+  background-color: rgba(0, 0, 0,1);
+  color: rgb(121, 0, 185);
+  height: 100%;
+  width: 13dvw;
+  display : flex;
+  flex-direction: column;
+}
+
+/* Files & Folder Buttons */
+#chooser > p{
+  margin-top: 2.5dvh;
+  /* padding-left: 2dvw; */
+  font-weight: 700;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Hovering For Files & Folder */
+#chooser > p:hover{
+  box-shadow: 2px 5px 10px  inset rgb(121, 0, 185);
+  color: rgb(197, 143, 228);
+}

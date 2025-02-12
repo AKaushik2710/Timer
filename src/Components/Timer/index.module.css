@@ -1,6 +1,5 @@
 #timer{
     font-size: 2rem;
-    border: 1px solid white;
     width: 90dvw;
     height: 80dvh;
     display: flex;
@@ -10,7 +9,6 @@
 
 #display{
     display: flex;
-    border: 1px solid white;
 }
 
 .time_holder{
@@ -28,4 +26,19 @@
     flex-direction: column;
     justify-content: space-around;
     height: 90%;
+}
+
+.xtra{
+    opacity: 0.3;
+}
+.hide{
+    visibility: hidden;
+}
+
+#functionality > button{
+    box-shadow: 0px 0px 70px inset rgb(154, 61, 216);
+}
+#functionlity > button:hover{
+    box-shadow: 0 0 70px rgb(154, 61, 216);
+    color: rgb(255, 0, 140);
 }

@@ -6,11 +6,8 @@
 }
 #functionality > button{
     box-shadow: 0px 0px 70px inset rgb(154, 61, 216);
-    /* background-color: rgb(154, 61, 216); */
 }
 #functionlity > button:hover{
-    /* box-shadow: 0px 35px 12px inset rgb(154, 243, 255); */
-    /* background-color: rgb(0, 238, 255); */
     box-shadow: 0 0 70px rgb(154, 61, 216);
     color: rgb(255, 0, 140);
 }
@@ -66,17 +63,20 @@
     background-color: rgb(154, 61, 216);
     color : black;
     font-weight: 700;
-    overflow-y: auto;
+    overflow-y: hidden;
+}
+#catcher:hover{
+    overflow-y : auto;
 }
 
 #catcher::-webkit-scrollbar{
     width: 2px;
 }
 #catcher::-webkit-scrollbar-thumb{
-    background-color: red;
+    background-color: rgb(154, 61, 216);
 }
 #catcher::-webkit-scrollbar-track{
-    background-color: green;
+    background-color: black;
 }
 
 .catches{
