@@ -20,6 +20,7 @@ export default function Timer(){
             break;
         }
     }
+
     function handleDownClicks(obj){
         switch (obj.time){
             case "hour" :
@@ -32,6 +33,14 @@ export default function Timer(){
                 setTimer({...timer, time : {...timer.time, seconds : timer.time.seconds+1}});
             break;
         }
+    }
+
+    function handlePause(){
+        console.log("Pause It");
+    }
+
+    function handleRestart(){
+        setTimer({...timer, time : {hour : 0, min : 0, seconds : 0}})
     }
     return <>
     <Div id="timer">
@@ -51,6 +60,10 @@ export default function Timer(){
                 <Para>{timer.time.seconds}</Para>
                 <Button cn="down_arr" clickHandler={()=> handleDownClicks({time : "seconds"})}>&#9660;</Button>
             </Div>
+        </Div>
+        <Div>
+            <Button clickHandler={handlePause}>{timer.pause ? "Play" : "Pause"}</Button>
+            <Button clickHandler={handleRestart}>{"Restart"}</Button>
         </Div>
     </Div>
     </>
