@@ -1,8 +1,31 @@
 #timer{
     font-size: 2rem;
+    border: 1px solid white;
+    width: 90dvw;
+    height: 80dvh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#display{
+    display: flex;
+    border: 1px solid white;
+}
+
+.time_holder{
+    display: flex;
+    flex-direction: column;
 }
 
 .up_arr,.down_arr{
     background-color: inherit;
     color: rgb(154, 61, 216);
+}
+
+#functionality{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 90%;
 }
