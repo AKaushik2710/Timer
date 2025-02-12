@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Div from "../Div";
 import Para from "../Para";
 import Button from "../Button"
-import './index.css'
+import styles from './index.module.css'
 export default function Stopwatch(){
     const [stopwatch, setStopwatch] = useState({seconds : 0, pause : true, min : 0, hour : 0});
     const [flags, setFlags] = useState([]);
@@ -45,32 +45,32 @@ export default function Stopwatch(){
         setFlags([...flags, `${stopwatch.hour}  :  ${stopwatch.min}  :  ${stopwatch.seconds}`])
     }
     return <>
-    <Div id="stopwatch">
-    <Div id="info">
-        <Div id="display">
-            <Div cn="time_holder">
-                <Para cn="time">{stopwatch.hour} <span className="txt">{"Hour"}</span></Para>
-                <Para cn="sep">{":"}</Para>
+    <Div id={styles.stopwatch}>
+    <Div id={styles.info}>
+        <Div id={styles.display}>
+            <Div cn={styles.time_holder}>
+                <Para cn={styles.time}>{stopwatch.hour} <span className={styles.txt}>{"Hour"}</span></Para>
+                <Para cn={styles.sep}>{":"}</Para>
             </Div>
-            <Div cn="time_holder">
-                <Para cn="time">{stopwatch.min}<span className="txt">{"Min"}</span></Para>
-                <Para  cn="sep">{":"}</Para>
+            <Div cn={styles.time_holder}>
+                <Para cn={styles.time}>{stopwatch.min}<span className={styles.txt}>{"Min"}</span></Para>
+                <Para  cn={styles.sep}>{":"}</Para>
             </Div>
-            <Div cn="time_holder">
-                <Para cn="time">{stopwatch.seconds}<span className="txt">{"Seconds"}</span></Para>
+            <Div cn={styles.time_holder}>
+                <Para cn={styles.time}>{stopwatch.seconds}<span className={styles.txt}>{"Seconds"}</span></Para>
             </Div>
         </Div>
-        <Div id="functionality">
-            <Button id="pause" clickHandler={()=>handlePause(!stopwatch.pause)}>{stopwatch.pause ? "Play" : "Pause"}</Button>
-            <Button id="restart" clickHandler={handleRestart}>{"Restart"}</Button>
+        <Div id={styles.functionality}>
+            <Button id={styles.pause} clickHandler={()=>handlePause(!stopwatch.pause)}>{stopwatch.pause ? "Play" : "Pause"}</Button>
+            <Button id={styles.restart} clickHandler={handleRestart}>{"Restart"}</Button>
             <Button ds={stopwatch.pause ? true : false} clickHandler={handleFlags}>{"Catch"}</Button>
         </Div>
     </Div>
-    <Div id="catcher">
+    {flags.length>0 ? (<Div id={styles.catcher}>
                 {flags.map((flag, index)=>{
-                    return <Para key={index} cn="catches"><span className="indexing">{index+1+"."}</span>{flag}</Para>
+                    return <Para key={index} cn={styles.catches}><span className={styles.indexing}>{index+1+"."}</span>{flag}</Para>
                 })}
-    </Div>
+    </Div>) : null}
     </Div>
     </>
 }

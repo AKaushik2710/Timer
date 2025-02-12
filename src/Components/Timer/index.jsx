@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import Div from "../Div";
 import Para from "../Para";
 import Button from "../Button"
-import "./index.css"
+import  styles from "./index.module.css"
 export default function Timer(){
     const [timer, setTimer] = useState({time:{hour : 1, min : 0, seconds : 0}, pause : true});
     const timeRef = useRef();
@@ -83,28 +83,33 @@ export default function Timer(){
         setTimer({...timer, time : {hour : timer.time.hour+timeChange.hour, min : timeChange.min, seconds : timeChange.seconds}})
     }
     return <>
-    <Div id="timer">
-        <Div id="display">
-            <Div cn="time_holder">
-                <Button cn="up_arr" ds={timer.time.hour >0 ? false : true} clickHandler={()=>handleUpClicks({time : "hour"})}>&#9650;</Button>
-                <Para>{timer.time.hour}</Para>
-                <Button cn="down_arr" clickHandler={()=> handleDownClicks({time : "hour"})}>&#9660;</Button>
+    <Div id={styles.timer}>
+        <Div id={styles.display}>
+            <Div cn={styles.time_holder}>
+                <Button cn={styles.up_arr} ds={timer.time.hour >0 ? false : true} clickHandler={()=>handleUpClicks({time : "hour"})}>&#9650;</Button>
+                <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.hour>0 ? timer.time.hour-1 : timer.time.hour}</Para>
+                    <Para>{timer.time.hour}</Para>
+                    <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.hour<59 ? timer.time.hour+1 : 0}</Para>
+                <Button cn={styles.down_arr} clickHandler={()=> handleDownClicks({time : "hour"})}>&#9660;</Button>
             </Div>
-            <Div cn="time_holder">
-            <Button cn="up_arr" ds={timer.time.min >0 ? false : true} clickHandler={()=> handleUpClicks({time : "min"})}>&#9650;</Button>
-                <Para>{timer.time.min}</Para>
-                <Button cn="down_arr" clickHandler={()=> handleDownClicks({time : "min"})}>&#9660;</Button>
+            <Div cn={styles.time_holder}>
+                <Button cn={styles.up_arr} ds={timer.time.min >0 ? false : true} clickHandler={()=> handleUpClicks({time : "min"})}>&#9650;</Button>
+                    <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.min>0 ? timer.time.min-1 : timer.time.min}</Para>
+                    <Para>{timer.time.min}</Para>
+                    <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.min<59 ? timer.time.min+1 : 0}</Para>
+                <Button cn={styles.down_arr} clickHandler={()=> handleDownClicks({time : "min"})}>&#9660;</Button>
             </Div>
-            <Div cn="time_holder">
-            <Button cn="up_arr" ds={timer.time.seconds >0 ? false : true} clickHandler={()=> handleUpClicks({time : "seconds"})}>&#9650;</Button>
-                <Para>{timer.time.seconds}</Para>
-                <Button cn="down_arr" clickHandler={()=> handleDownClicks({time : "seconds"})}>&#9660;</Button>
+            <Div cn={styles.time_holder}>
+                <Button cn={styles.up_arr} ds={timer.time.seconds >0 ? false : true} clickHandler={()=> handleUpClicks({time : "seconds"})}>&#9650;</Button>
+                    <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.seconds>0 ? timer.time.seconds-1 : timer.time.seconds}</Para>
+                    <Para>{timer.time.seconds}</Para>
+                    <Para cn={`${styles.xtra} ${!timer.pause ? styles.hide : ''}`}>{timer.time.seconds<59 ? timer.time.seconds+1 : 0}</Para>
+                <Button cn={styles.down_arr} clickHandler={()=> handleDownClicks({time : "seconds"})}>&#9660;</Button>
             </Div>
         </Div>
-        <Div id="functionality">
+        <Div id={styles.functionality}>
             <Button clickHandler={handleAddition}>{"+10s"}</Button>
             <Button clickHandler={handlePause}>{timer.pause ? "Play" : "Pause"}</Button>
-            {/* <Button clickHandler={handleRestart}>{"Restart"}</Button> */}
             <Button clickHandler={handleRestart}>{"Reset"}</Button>
         </Div>
     </Div>
