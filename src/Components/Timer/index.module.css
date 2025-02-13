@@ -1,3 +1,4 @@
+/* Timer Component */
 #timer{
     font-size: 2rem;
     width: 90dvw;
@@ -7,20 +8,24 @@
     align-items: center;
 }
 
+/* Display Container */
 #display{
     display: flex;
 }
 
+/* Time Holding Container */
 .time_holder{
     display: flex;
     flex-direction: column;
 }
 
+/* Time Increasing/Decreasing Buttons */
 .up_arr,.down_arr{
     background-color: inherit;
     color: rgb(154, 61, 216);
 }
 
+/* Functionality Buttons Holder */
 #functionality{
     display: flex;
     flex-direction: column;
@@ -28,16 +33,22 @@
     height: 90%;
 }
 
+/* Increased/Decreased Time */
 .xtra{
     opacity: 0.3;
 }
+
+/* Hiding Increased/Decreased Time */
 .hide{
     visibility: hidden;
 }
 
+/* Functionality Buttons */
 #functionality > button{
     box-shadow: 0px 0px 70px inset rgb(154, 61, 216);
 }
+
+/* Hovering for Functionality Buttons */
 #functionlity > button:hover{
     box-shadow: 0 0 70px rgb(154, 61, 216);
     color: rgb(255, 0, 140);

@@ -1,22 +1,31 @@
+/* Universal Selector */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     background-color: black;
 }
+
+/* Functionality Buttons */
 #functionality > button{
     box-shadow: 0px 0px 70px inset rgb(154, 61, 216);
 }
+
+/* Hovering for Functionality Buttons */
 #functionlity > button:hover{
     box-shadow: 0 0 70px rgb(154, 61, 216);
     color: rgb(255, 0, 140);
 }
+
+/* Stopwatch Component */
 #stopwatch{
     display: flex;
     width: 75dvw;
     height: 60.5dvh;
     justify-content: space-between;
 }
+
+/* Display Container */
 #display{
     display: flex;
     width: 50dvw;
@@ -24,6 +33,8 @@
     justify-content: space-between;
     color: rgb(255, 0, 140);
 }
+
+/* Represented Time */
 .time{
     display: flex;
     font-size: 3rem;
@@ -32,6 +43,7 @@
     justify-content: center;
 }
 
+/* Time Holding Container */
 .time_holder{
     flex: 33%;
     height: inherit;
@@ -40,20 +52,24 @@
     align-items: center;
 }
 
+/* Time Separators */
 .sep{
     font-size: 4rem;
 }
 
+/* Time Annotation */
 .txt{
     margin-top: 85px;
 }
 
+/* Functionality Buttons Holder */
 #functionality{
     display: flex;
     justify-content: space-around;
     font-size: 1.4rem;
 }
 
+/* Catched Time Holder */
 #catcher{
     width: 20dvw;
     display: flex;
@@ -65,20 +81,28 @@
     font-weight: 700;
     overflow-y: hidden;
 }
+
+/* Hovering for Catched Time Holder */
 #catcher:hover{
     overflow-y : auto;
 }
 
+/* Scrollbar for Catched Time Holder */
 #catcher::-webkit-scrollbar{
     width: 2px;
 }
+
+/* Scrollbar thumb for Catched Time Holder  */
 #catcher::-webkit-scrollbar-thumb{
     background-color: rgb(154, 61, 216);
 }
+
+/* Scrollbar track for Catched Time Holder  */
 #catcher::-webkit-scrollbar-track{
     background-color: black;
 }
 
+/* Catched Time */
 .catches{
     font-size: 1.5rem;
     margin-top: 2dvh;
@@ -86,10 +110,13 @@
     background-color: inherit;
 }
 
+/* Hovering for Catched Time Holder */
 #catcher:hover{
     background-color: black;
     color: rgb(154, 61, 216);
 }
+
+/* Hovering for Catched Time */
 .catches:hover{
     border: 2px solid rgb(154, 61, 216);
     border-radius: 10px;
@@ -97,6 +124,7 @@
     color: rgb(154, 61, 216);
 }
 
+/* Index Values of Catched Time*/
 .indexing{
     position: absolute;
     left: 0.5dvw;
@@ -131,12 +159,10 @@
     .time_holder{
         height: 100%;
         flex: 33.3%;
-        border: 1px solid white;
     }
 
     .time{
         font-size:  1.6rem;
-        border: 1px solid white;
         display: flex;
         flex-direction: column;
         justify-content: end;
@@ -156,7 +182,6 @@
         flex-direction: row;
         width: 100%;
         height: 10dvh;
-        border: 1px solid white;
         justify-content: space-around;
         align-items: center;
     }
