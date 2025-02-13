@@ -104,3 +104,84 @@
     font-size: 1rem;
     background-color: inherit;
 }
+
+@media (max-width : 425px){
+    #stopwatch{
+        display : flex;
+        width: 80dvw;
+        height: 70dvh;
+        position: relative;
+    }
+
+    #info{
+        width: inherit;
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #display{
+        width: 100%;
+        height: 20dvh;
+        /* border: 1px solid white; */
+        display: flex;
+        justify-content: center;
+    }
+
+    .time_holder{
+        height: 100%;
+        flex: 33.3%;
+        border: 1px solid white;
+    }
+
+    .time{
+        font-size:  1.6rem;
+        border: 1px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        gap: 5px;
+    }
+
+    .txt{
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    .sep{
+        font-size: 1.5rem;
+    }
+
+    #functionality{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 10dvh;
+        border: 1px solid white;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #functionality > button{
+        width : 23dvw;
+        padding: 3px;
+        height: 8dvh;
+        font-size: 1rem;
+    }
+
+    #catcher{
+        position: absolute;
+        bottom: 10dvh;
+        height: 40dvh;
+        width: 80dvw;
+    }
+
+    .indexing{
+        font-size: 0.7rem;
+    }
+    .catches{
+        font-size: 1rem;
+        margin-top: 1dvh;
+        position: relative;
+        background-color: inherit;
+    }
+}

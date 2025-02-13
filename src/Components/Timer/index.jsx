@@ -4,7 +4,7 @@ import Para from "../Para";
 import Button from "../Button"
 import  styles from "./index.module.css"
 export default function Timer(){
-    const [timer, setTimer] = useState({time:{hour : 1, min : 0, seconds : 0}, pause : true});
+    const [timer, setTimer] = useState({time:{hour : 0, min : 0, seconds : 0}, pause : true});
     const timeRef = useRef();
 
     useEffect(() => {

@@ -42,3 +42,28 @@
     box-shadow: 0 0 70px rgb(154, 61, 216);
     color: rgb(255, 0, 140);
 }
+
+@media (max-width : 425px){
+    #timer{
+        display: flex;
+        flex-direction: column;
+        width: 80dvw;
+        height: 60dvh;
+    }
+
+    #functionality{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 10dvh;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #functionality > button{
+        width : 23dvw;
+        padding: 3px;
+        height: 8dvh;
+        font-size: 1rem;
+    }
+}

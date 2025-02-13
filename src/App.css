@@ -55,6 +55,7 @@
 #chooser{
   z-index: 1;
   position: absolute;
+  border: 1px solid white;
   left: 0;
   top : 0;
   background-color: rgba(0, 0, 0,1);
@@ -78,4 +79,15 @@
 #chooser > p:hover{
   box-shadow: 2px 5px 10px  inset rgb(121, 0, 185);
   color: rgb(197, 143, 228);
+}
+
+@media (max-width : 425px){
+  #hamburger{
+    font-size: 1.5rem;
+    left: 4dvw;
+    top: 2dvh;
+  }
+  #chooser{
+    width: 35dvw;
+  }
 }
