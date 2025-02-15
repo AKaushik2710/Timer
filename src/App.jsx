@@ -7,6 +7,7 @@ import Timer from './Components/Timer'
 import Chooser from './Components/Choose'
 import Div from './Components/Div'
 import Para from './Components/Para'
+import Clock from './Components/Clock'
 function App() {
   // Setting Current App & Display of Chooser
   const [isIst, setIsIst] = useState({times : true, choose : false})
@@ -23,6 +24,7 @@ function App() {
     </Div>
     {isIst.times ? (<Stopwatch></Stopwatch>) : <Timer></Timer>} {/* Stopwatch/Timer */}
   </Div>
+  <Clock />
   </>
 }
 
