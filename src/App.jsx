@@ -22,7 +22,7 @@ function App() {
     <Div id="swapper"> {/* Swap Option Holder */}
       {isIst.choose ? <Chooser handleSwap={handleSwap}></Chooser> : null} {/* Swap Options */}
     </Div>
-    {isIst.times ? (<Stopwatch></Stopwatch>) : <Timer></Timer>} {/* Stopwatch/Timer */}
+    {/*isIst.times ? (<Stopwatch></Stopwatch>) : <Timer></Timer>} {/* Stopwatch/Timer */}
   </Div>
   <Clock />
   </>
