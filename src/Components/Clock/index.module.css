@@ -11,9 +11,14 @@
     border: 1px solid white;
 }
 
+#clock_holder{
+    display: flex;
+    flex-direction: column;
+    width: 20dvw;
+}
+
 #time{
     font-size: 1rem;
-    position: absolute;
     top: 5dvh;
     border: 1px solid white;
     flex: 20%;
@@ -23,26 +28,26 @@
     border: 1px solid white;
     border: 1px solid blue;
     border-radius: 50%;
-    width : 100px;
-    height: 100px;
+    width : 20dvw;
+    height: 20dvw;
     overflow: hidden;
     background-color: white;
     position: relative;
 }
 #sec{
-    width: 3px;
-    height: 40px;
+    width: 2px;
+    height: 20dvh;
     background-color: black;
     position: absolute;
     margin: auto;
     left: 50%;
-    top: 32%;
+    top: 30%;
     transform: translate(-50%, -50%);
 }
 
 #min{
     width: 3px;
-    height: 30px;
+    height: 15dvh;
     background-color: black;
     position: absolute;
     margin: auto;
@@ -53,21 +58,79 @@
 
 #hour{
     width : 3px;
-    height: 20px;
+    height: 12dvh;
     background-color: black;
     position: absolute;
     left: 50%;
-    top: 40.5%;
+    top: 38.5%;
     transform: translate(-50%, -50%);
 }
 
 #dial{
-    width: 10px;
+    width: 1dvw;
     border-radius: 50%;
-    height: 10px;
+    height: 1dvw;
     background-color: black;
     position: absolute;
     left: 51%;
     top: 51%;
     transform: translate(-50%, -50%);
+}
+
+#alarm_setter{
+    width: 30dvw;
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    flex-direction: column;
+}
+
+#alarm_ask_holder{
+    height: 30%;
+    width: inherit;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#alarm_ask{
+    font-size: 1.3rem;
+    padding: 15px;
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}
+
+#alarm_ask:hover{
+
+    color: rgb(219, 164, 255);
+    box-shadow: 0px 0px 20px inset rgb(154, 61, 216);
+}
+#alarm_time{
+    display: flex;
+    width: inherit;
+    height: 70%;
+    justify-content: space-around;
+}
+.alarm_holder{
+    width: 10dvw;
+    height: 50%;
+    display: flex;
+    font-size: 1.6rem;
+    flex-direction: column;
+}
+
+.hide{
+    visibility: hidden;
+}
+/* Time Increasing/Decreasing Buttons */
+.up_arr,.down_arr{
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}
+
+/* Increased/Decreased Time */
+.xtra{
+    opacity: 0.3;
 }
