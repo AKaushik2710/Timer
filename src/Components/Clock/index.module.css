@@ -1,14 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#clock{
+    width: 80dvw;
+    height: 80dvh;
+    display: flex;
+    border: 1px solid white;
+}
+
+#clock_holder{
+    display: flex;
+    flex-direction: column;
+    width: 20dvw;
+}
+
 #time{
     font-size: 1rem;
-    position: absolute;
     top: 5dvh;
+    border: 1px solid white;
+    flex: 20%;
 }
 
 #circle{
+    border: 1px solid white;
     border: 1px solid blue;
-    border-radius: 25%;
+    border-radius: 50%;
+    width : 20dvw;
+    height: 20dvw;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
 }
-#arr{
-    font-size: 2rem;
-    color: red;
+#sec{
+    width: 2px;
+    height: 20dvh;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
 }
+
+#min{
+    width: 3px;
+    height: 15dvh;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#hour{
+    width : 3px;
+    height: 12dvh;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 38.5%;
+    transform: translate(-50%, -50%);
+}
+
+#dial{
+    width: 1dvw;
+    border-radius: 50%;
+    height: 1dvw;
+    background-color: black;
+    position: absolute;
+    left: 51%;
+    top: 51%;
+    transform: translate(-50%, -50%);
+}
+
+#alarm_setter{
+    width: 30dvw;
+    display: flex;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    flex-direction: column;
+}
+
+#alarm_ask_holder{
+    height: 30%;
+    width: inherit;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#alarm_ask,#alarm_set_button>button{
+    font-size: 1.3rem;
+    padding: 15px;
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}
+
+#alarm_set_button>button{
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}
+#alarm_ask:hover, #alarm_set_button>button:hover{
+
+    color: rgb(219, 164, 255);
+    box-shadow: 0px 0px 20px inset rgb(154, 61, 216);
+}
+
+#alarm_set_button{
+    display: flex;
+    width: inherit;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#alarm_set_button>button{
+    border-radius: 5px;
+    width: 7dvw;
+    cursor: pointer;
+}
+#alarm_time{
+    display: flex;
+    width: inherit;
+    height: 70%;
+    justify-content: space-around;
+}
+.alarm_holder{
+    width: 10dvw;
+    height: 50%;
+    display: flex;
+    font-size: 1.6rem;
+    flex-direction: column;
+}
+
+.hide{
+    visibility: hidden;
+}
+/* Time Increasing/Decreasing Buttons */
+.up_arr,.down_arr{
+    background-color: inherit;
+    color: rgb(154, 61, 216);
+}
+
+/* Increased/Decreased Time */
+.xtra{
+    opacity: 0.3;
+}
+
+#alarm_list{
+    width: 30dvw;
+    height: inherit;
+    border: 1px solid white;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+}
+
+#alarm_list:hover{
+    overflow-y: auto;
+}
+.settedAlarms{
+    width: 30dvw;
+    font-size: 1.3rem;
+    padding: 5px;
+}
+
