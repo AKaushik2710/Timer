@@ -1,14 +1,73 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#clock{
+    width: 80dvw;
+    height: 80dvh;
+    display: flex;
+    border: 1px solid white;
+}
+
 #time{
     font-size: 1rem;
     position: absolute;
     top: 5dvh;
+    border: 1px solid white;
+    flex: 20%;
 }
 
 #circle{
+    border: 1px solid white;
     border: 1px solid blue;
-    border-radius: 25%;
+    border-radius: 50%;
+    width : 100px;
+    height: 100px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
 }
-#arr{
-    font-size: 2rem;
-    color: red;
+#sec{
+    width: 3px;
+    height: 40px;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 32%;
+    transform: translate(-50%, -50%);
+}
+
+#min{
+    width: 3px;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+}
+
+#hour{
+    width : 3px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 40.5%;
+    transform: translate(-50%, -50%);
+}
+
+#dial{
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    left: 51%;
+    top: 51%;
+    transform: translate(-50%, -50%);
 }
